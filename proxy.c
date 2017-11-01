@@ -95,7 +95,7 @@ int main(int argc, char **argv) {
     }
 
     while (1) {
-        accept_sockfd = accpet(sockfd, (struct sockaddr *) &cl_addr, &sin_size);
+        accept_sockfd = accept(sockfd, (struct sockaddr *) &cl_addr, &sin_size);
         if (accept_sockfd < 0) {
             printf("Accept failed...\n");
             continue;
